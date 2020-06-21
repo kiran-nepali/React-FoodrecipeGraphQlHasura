@@ -1,25 +1,27 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { ApolloProvider} from '@apollo/client';
+import {ApolloClient,HttpLink,InMemoryCache } from '@apollo/client';
+import FoodSearch from './components/FoodSearch';
+// import FoodRecipe from "./components/FoodRecipe";
+// import SearchForm  from  "./components/SearchForm";
+
+const client = new ApolloClient({
+  cache: new InMemoryCache(),
+  link: new HttpLink({
+    uri:"https://item-adder.herokuapp.com/v1/graphql"
+  })
+});
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ApolloProvider client ={client}>
+      <div className="App">
+        Food Recipe
+        <FoodSearch />
+      </div>
+    </ApolloProvider>
   );
 }
 
