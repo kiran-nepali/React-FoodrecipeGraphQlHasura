@@ -3,6 +3,8 @@ import './App.css';
 import { ApolloProvider} from '@apollo/client';
 import {ApolloClient,HttpLink,InMemoryCache } from '@apollo/client';
 import FoodSearch from './components/FoodSearch';
+import { BrowserRouter, Switch, Route } from "react-router-dom";
+import Food from "./components/Food";
 // import FoodRecipe from "./components/FoodRecipe";
 // import SearchForm  from  "./components/SearchForm";
 
@@ -16,12 +18,17 @@ const client = new ApolloClient({
 
 function App() {
   return (
-    <ApolloProvider client ={client}>
-      <div className="App">
-        Food Recipe
-        <FoodSearch />
-      </div>
-    </ApolloProvider>
+    <BrowserRouter>
+      <ApolloProvider client ={client}>
+        <div className="App">
+          Food Recipe
+          <Switch>
+            <Route path="/foodrecipe/:id" component={Food} />
+            <Route path="/" component={FoodSearch} />
+          </Switch>
+        </div>
+      </ApolloProvider>
+    </BrowserRouter>
   );
 }
 

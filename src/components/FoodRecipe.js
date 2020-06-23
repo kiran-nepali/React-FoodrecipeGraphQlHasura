@@ -1,6 +1,7 @@
 import React from 'react';
 import { useQuery,gql } from '@apollo/client';
 import {Badge} from "./shared/Badge";
+import {Link} from 'react-router-dom';
 
 const RECIPE = gql`
 {
@@ -18,10 +19,12 @@ export default function FoodRecipe({newFoodSearch}){
     const renderFood = (food) => {
       return food.map(({id,name,recipe1,recipe2}) =>(
       <div key={id}>
-            <p>
-                {name} | <Badge>{recipe1} | {recipe2}</Badge>
-            </p>
-        </div>
+        <Link to = {`/foodrecipe/${id}`}>
+          <p>
+            {name} | <Badge>{recipe1} | {recipe2}</Badge>
+          </p>
+        </Link>
+      </div>
         ));
     };
 
