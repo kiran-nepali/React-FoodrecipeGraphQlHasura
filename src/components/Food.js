@@ -1,9 +1,9 @@
 import React from 'react';
-import { useQuery, gql } from '@apollo/client';
+import { useSubscription, gql } from '@apollo/client';
 import {Badge} from './shared/Badge';
 
 const FOOD = gql`
-query MyQuery($id:uuid!) {
+subscription MyQuery($id:uuid!) {
     FoodRecipe_by_pk(id:$id ) {
       name
       recipe1
@@ -21,7 +21,7 @@ const Food = ({
         params:{ id }
     }
 }) => {
-    const {loading,error,data} = useQuery(FOOD,{variables:{id}});
+    const {loading,error,data} = useSubscription(FOOD,{variables:{id}});
     if(loading) return <p>Loading...</p>;
     if(error) return <p>Error...</p>;
 
