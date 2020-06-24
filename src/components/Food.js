@@ -1,6 +1,7 @@
 import React from 'react';
 import { useSubscription, gql } from '@apollo/client';
 import {Badge} from './shared/Badge';
+import ReviewForm from './ReviewForm';
 
 const FOOD = gql`
 subscription MyQuery($id:uuid!) {
@@ -32,11 +33,13 @@ const Food = ({
             <h3>
             {name}<Badge>{recipe1}|{recipe2}</Badge>
             </h3>
+            <ReviewForm />
             <p>
                 {Reviews.map((review)=>(
                     <ul key={review.id}>{review.body}</ul>
                 ))}
             </p>
+
         </div>
     )
 
