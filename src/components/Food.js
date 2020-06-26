@@ -1,5 +1,5 @@
-import React from 'react';
-import { useSubscription, gql } from '@apollo/client';
+import React,{useState} from 'react';
+import { useSubscription,useMutation, gql } from '@apollo/client';
 import {Badge} from './shared/Badge';
 import ReviewForm from './ReviewForm';
 
@@ -9,7 +9,7 @@ subscription MyQuery($id:uuid!) {
       name
       recipe1
       recipe2
-      Reviews {
+      Reviews(order_by:{created_at:desc}) {
         body
         food_id
       }
@@ -17,12 +17,22 @@ subscription MyQuery($id:uuid!) {
   }
 `;
 
+const ADDREVIEW = gql`
+    mutation MyMutation($body:String!,$foodId:uuid!) {
+        insert_Reviews(objects: {body:$body , food_id:$foodId }) {
+        affected_rows
+        }
+    }
+`;
+
 const Food = ({
     match:{
         params:{ id }
     }
 }) => {
+    const [inputVal,setInputVal] = useState("");
     const {loading,error,data} = useSubscription(FOOD,{variables:{id}});
+    const [addReview] = useMutation(ADDREVIEW);
     if(loading) return <p>Loading...</p>;
     if(error) return <p>Error...</p>;
 
@@ -33,7 +43,17 @@ const Food = ({
             <h3>
             {name}<Badge>{recipe1}|{recipe2}</Badge>
             </h3>
-            <ReviewForm />
+            <ReviewForm
+            inputVal = {inputVal}
+            onChange = {(e) => setInputVal(e.target.value)}
+            onSubmit={()=>{
+                addReview({variables:{foodId:id,body:inputVal}})
+                .then(()=> setInputVal(""))
+                .catch((e)=> {
+                    setInputVal(e.message);
+                })
+            }}
+            />
             <p>
                 {Reviews.map((review)=>(
                     <ul key={review.id}>{review.body}</ul>
