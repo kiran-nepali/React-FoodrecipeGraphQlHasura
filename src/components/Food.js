@@ -57,7 +57,9 @@ const Food = ({
             />
             <p>
                 {Reviews.map((review)=>(
-                    <ul key={review.id}>{review.body}</ul>
+                    <ul >
+                        <li key={review.id}>{review.body}</li>
+                    </ul>
                 ))}
             </p>
 

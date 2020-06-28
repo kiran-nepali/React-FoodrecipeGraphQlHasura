@@ -21,7 +21,7 @@ export default function FoodRecipe({newFoodSearch}){
       <div key={id}>
         <Link to = {`/foodrecipe/${id}`}>
           <p>
-            {name} | <Badge>{recipe1} | {recipe2}</Badge>
+            {name}  <Badge>{recipe1} | {recipe2}</Badge>
           </p>
         </Link>
       </div>
