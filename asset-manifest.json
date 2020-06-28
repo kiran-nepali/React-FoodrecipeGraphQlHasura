@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/React-FoodrecipeGraphQlHasura/static/css/main.fdc5cbe1.chunk.css",
-    "main.js": "/React-FoodrecipeGraphQlHasura/static/js/main.730d5ce2.chunk.js",
-    "main.js.map": "/React-FoodrecipeGraphQlHasura/static/js/main.730d5ce2.chunk.js.map",
+    "main.js": "/React-FoodrecipeGraphQlHasura/static/js/main.3e5130ca.chunk.js",
+    "main.js.map": "/React-FoodrecipeGraphQlHasura/static/js/main.3e5130ca.chunk.js.map",
     "runtime-main.js": "/React-FoodrecipeGraphQlHasura/static/js/runtime-main.b0d482cd.js",
     "runtime-main.js.map": "/React-FoodrecipeGraphQlHasura/static/js/runtime-main.b0d482cd.js.map",
     "static/js/2.e17c7519.chunk.js": "/React-FoodrecipeGraphQlHasura/static/js/2.e17c7519.chunk.js",
     "static/js/2.e17c7519.chunk.js.map": "/React-FoodrecipeGraphQlHasura/static/js/2.e17c7519.chunk.js.map",
     "index.html": "/React-FoodrecipeGraphQlHasura/index.html",
-    "precache-manifest.20951e337be29788bb16d3acc86defb7.js": "/React-FoodrecipeGraphQlHasura/precache-manifest.20951e337be29788bb16d3acc86defb7.js",
+    "precache-manifest.dc0c200a5d6af940ea615c2db5c54564.js": "/React-FoodrecipeGraphQlHasura/precache-manifest.dc0c200a5d6af940ea615c2db5c54564.js",
     "service-worker.js": "/React-FoodrecipeGraphQlHasura/service-worker.js",
     "static/css/main.fdc5cbe1.chunk.css.map": "/React-FoodrecipeGraphQlHasura/static/css/main.fdc5cbe1.chunk.css.map",
     "static/js/2.e17c7519.chunk.js.LICENSE.txt": "/React-FoodrecipeGraphQlHasura/static/js/2.e17c7519.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.b0d482cd.js",
     "static/js/2.e17c7519.chunk.js",
     "static/css/main.fdc5cbe1.chunk.css",
-    "static/js/main.730d5ce2.chunk.js"
+    "static/js/main.3e5130ca.chunk.js"
   ]
 }

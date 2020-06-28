@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "67deb07a7d3ae579e97fd67503eadd39",
+    "revision": "eaab67a63f5f3286802a811d9b366776",
     "url": "/React-FoodrecipeGraphQlHasura/index.html"
   },
   {
-    "revision": "c89cd285ab9c208e43df",
+    "revision": "893743e5d41da389d069",
     "url": "/React-FoodrecipeGraphQlHasura/static/css/main.fdc5cbe1.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/React-FoodrecipeGraphQlHasura/static/js/2.e17c7519.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "c89cd285ab9c208e43df",
-    "url": "/React-FoodrecipeGraphQlHasura/static/js/main.730d5ce2.chunk.js"
+    "revision": "893743e5d41da389d069",
+    "url": "/React-FoodrecipeGraphQlHasura/static/js/main.3e5130ca.chunk.js"
   },
   {
     "revision": "7b8fb52732fdeeef1837",

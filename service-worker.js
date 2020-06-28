@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/React-FoodrecipeGraphQlHasura/precache-manifest.20951e337be29788bb16d3acc86defb7.js"
+  "/React-FoodrecipeGraphQlHasura/precache-manifest.dc0c200a5d6af940ea615c2db5c54564.js"
 );
 
 self.addEventListener('message', (event) => {
