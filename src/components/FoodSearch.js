@@ -18,7 +18,7 @@ const FoodSearch = () =>{
     const [inputval,setInputval] = useState("");
     const [search,{loading,error,data}] = useLazyQuery(SEARCHQRY);
     return(
-        <>
+        <div class="content">
             <SearchForm
                 inputval = {inputval}
                 onChange = {(e) => setInputval(e.target.value)}
@@ -27,7 +27,7 @@ const FoodSearch = () =>{
             <FoodRecipe
                 newFoodSearch = {data ? data.FoodRecipe: null}
             />
-        </>
+        </div>
     )
 }
 

@@ -1,6 +1,17 @@
-.App {
-  margin-top: 100px;
+.container {
+  /* margin-top: 100px;
 text-align: center;
-  background-color: #f7f7f7;;
+  background-color: #f7f7f7;; */
+  margin:0 auto;
+  max-width: 1000px;
+  padding:40px;
 }
 
+.title{
+  text-align: center;
+  font-size: 4.4rem;
+}
+
+.content{
+text-align: center;
+}

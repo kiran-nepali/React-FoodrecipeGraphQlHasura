@@ -39,10 +39,11 @@ const Food = ({
     const {name,recipe1,recipe2,Reviews} = data.FoodRecipe_by_pk;
 
     return (
-        <div>
+        <div className="content">
             <h3>
             {name}<Badge>{recipe1}|{recipe2}</Badge>
             </h3>
+            <h3>Reviews</h3>
             <ReviewForm
             inputVal = {inputVal}
             onChange = {(e) => setInputVal(e.target.value)}

@@ -3,6 +3,7 @@ import styled from "@emotion/styled";
 export const Badge = styled.span `
     display:inline-block;
     padding: 0.5rem 1rem;
+    margin:1rem;
     font-size:1.6rem;
     font-weight:600;
     line-heignt:1;

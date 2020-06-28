@@ -46,8 +46,8 @@ function App() {
   return (
     <BrowserRouter>
       <ApolloProvider client ={client}>
-        <div className="App">
-          Food Recipe
+        <div className="container">
+          <header><h1 className="title">Food Recipe</h1></header>
           <Switch>
             <Route path="/foodrecipe/:id" component={Food} />
             <Route path="/" component={FoodSearch} />
