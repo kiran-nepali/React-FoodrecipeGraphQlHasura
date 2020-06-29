@@ -7,7 +7,9 @@ Here is the link to app: https://kiran-nepali.github.io/React-FoodrecipeGraphQlH
 
 ### Learning Outcome
 
-GraphQL : It's a query language for api and a server-side runtime for executing queries by using a type system you define for your data
+- React Router : Allows to build single page application with navigation without the page refreshing as the user navigates
+
+- GraphQL : It's a query language for api and a server-side runtime for executing queries by using a type system you define for your data
 
 #### Apolo Client react hooks
 
